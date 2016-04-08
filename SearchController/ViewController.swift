@@ -46,7 +46,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         //设置导航的标题
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:RGBA (255.0, g:255.0, b: 255.0, a: 1),NSFontAttributeName:UIFont.systemFontOfSize(18)]
-        self.navigationItem.title = "吃货点评"
+        self.navigationItem.title = "大学排名"
         
         //设置导航背景图
         self.navigationController?.navigationBar.barTintColor = RGBA (86.0, g:173.0, b: 216.0, a: 1)
@@ -71,6 +71,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //            controller.searchBar.searchBarStyle = .Minimal
 //            controller.searchBar.sizeToFit()
             self.tableView.tableHeaderView = controller.searchBar
+            
+            controller.searchBar.placeholder = "输入学校名称..."
+            controller.searchBar.tintColor = UIColor.whiteColor()
+            //controller.searchBar.barTintColor = UIColor.orangeColor()
+            controller.searchBar.searchBarStyle = .Minimal
             
             controller.hidesNavigationBarDuringPresentation = false;//不会自动隐藏导航了
             
